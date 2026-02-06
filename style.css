@@ -219,3 +219,23 @@ footer {
         margin: 20px auto;
         width: 300px;
     }
+
+/* Genel merkezleme düzeltmesi */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Before / After özel */
+.ba-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Audio player ortalama */
+.ba-player audio {
+    width: 100%;
+    max-width: 350px;
+}
