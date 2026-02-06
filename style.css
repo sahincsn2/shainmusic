@@ -1,114 +1,183 @@
-/* Genel */
+/* GENEL */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #111;
+    background: #0d0d0d;
     color: #fff;
 }
 
-/* Header */
-header {
-    background: #000;
-    padding: 20px 50px;
+a {
+    text-decoration: none;
+    color: #fff;
 }
+
+/* HEADER */
+header {
+    background: #111;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+header nav h1 {
+    font-size: 28px;
+    color: #1DB954;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-header nav h1 {
-    font-size: 28px;
-    color: #4CAF50;
+    gap: 25px;
 }
 
-/* Hero */
+header nav ul li a:hover {
+    color: #1DB954;
+}
+
+/* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #4CAF50, #1DB954);
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #1DB954, #4CAF50);
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
+
 .hero h2 {
     font-size: 48px;
+    margin-bottom: 20px;
 }
+
 .hero p {
     font-size: 20px;
-    margin: 20px 0;
+    margin-bottom: 30px;
 }
+
 .hero button {
-    padding: 15px 30px;
+    padding: 15px 40px;
     font-size: 18px;
     background: #fff;
     color: #111;
     border: none;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: 0.3s;
 }
+
 .hero button:hover {
     background: #f1f1f1;
 }
 
-/* Services */
+/* HİZMETLER */
 #services {
     padding: 80px 20px;
     text-align: center;
+    background: #111;
 }
+
 #services h2 {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 36px;
-    color: #4CAF50;
+    color: #1DB954;
 }
+
 .cards {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
+
 .card {
     background: #222;
     padding: 30px;
-    border-radius: 10px;
-    width: 250px;
-    transition: transform 0.3s;
-}
-.card:hover {
-    transform: scale(1.05);
+    border-radius: 15px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* About */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* HAKKINDA */
 #about {
     padding: 80px 20px;
     text-align: center;
 }
+
 #about h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #4CAF50;
+    color: #1DB954;
 }
 
-/* Contact */
+/* İLETİŞİM */
 #contact {
     padding: 80px 20px;
     text-align: center;
 }
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
+
+#contact .socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-/* Footer */
+#contact .socials a {
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #1DB954;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+#contact .socials a:hover {
+    background: #1DB954;
+    color: #111;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #000;
+    background: #111;
     color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero button {
+        width: 80%;
+    }
+
+    #contact .socials {
+        flex-direction: column;
+    }
 }
